@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Chess Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Auth Screen (shown when not logged in) -->
+    <div class="auth-screen" id="authScreen">
+        <div class="auth-container">
+            <div class="auth-theme-toggle">
+                <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Switch to light mode">
+                    <span class="theme-icon" aria-hidden="true">🌙</span>
+                    <span class="theme-label">Dark</span>
+                </button>
+            </div>
+            <div class="auth-header">
+                <div class="auth-logo-title">
+                    <img src="images/Logo.png" alt="Chess Logo" class="game-logo">
+                    <h1>Chess Online</h1>
+                </div>
+                <p>Play chess online with friends or random opponents</p>
+            </div>
+            
+            <div class="auth-box">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" id="loginTab">Login</button>
+                    <button class="auth-tab" id="signupTab">Sign Up</button>
+                </div>
+
+                <div class="auth-form" id="loginForm">
+                    <input type="text" id="loginUsername" placeholder="Username" autocomplete="username">
+                    <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password">
+                    <button class="btn btn-primary" id="loginBtn">Login</button>
+                    <div class="auth-error hidden" id="loginError"></div>
+                </div>
+
+                <div class="auth-form hidden" id="signupForm">
+                    <input type="text" id="signupUsername" placeholder="Username (min 3 characters)" autocomplete="username">
+                    <input type="password" id="signupPassword" placeholder="Password (min 6 characters)" autocomplete="new-password">
+                    <input type="password" id="signupPasswordConfirm" placeholder="Confirm Password" autocomplete="new-password">
+                    <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+                    <div class="auth-error hidden" id="signupError"></div>
+                </div>
+
+                <div class="auth-info">
+                    <p>🏆 Starting Elo Rating: 600</p>
+                    <p>♟️ Play ranked matches to climb the leaderboard!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Dashboard (shown when logged in) -->
+    <div class="home-screen hidden" id="homeScreen">
+        <div class="container">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-brand">
+                    <img src="images/Logo.png" alt="Chess Logo" class="game-logo">
+                    <h1>Chess Online</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <span class="username-display" id="usernameDisplay">Player</span>
+                        <span class="elo-display" id="eloDisplay">1200</span>
+                    </div>
+                    <button class="btn btn-secondary btn-sm" id="logoutBtn">Logout</button>
+                    <div class="connection-status">
+                        <span class="status-indicator" id="connectionStatus"></span>
+                        <span id="connectionText">Connecting...</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Home Dashboard Content -->
+            <div class="home-dashboard">
+                <!-- Main Content Column -->
+                <div class="dashboard-main">
+                    <!-- Welcome Section -->
+                    <div class="welcome-section">
+                    <h2>Welcome back, <span id="welcomeUsername">Player</span>!</h2>
+                    <div class="user-stats">
+                        <div class="stat-card">
+                            <div class="stat-value" id="statElo">1200</div>
+                            <div class="stat-label">Elo Rating</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="statGames">0</div>
+                            <div class="stat-label">Games Played</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="statWins">0</div>
+                            <div class="stat-label">Wins</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="statDraws">0</div>
+                            <div class="stat-label">Draws</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="statLosses">0</div>
+                            <div class="stat-label">Losses</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Play Buttons Section -->
+                <div class="play-section">
+                    <h3>Choose Game Mode</h3>
+                    
+                    <!-- Board Theme Selection -->
+                    <div class="theme-selection-section">
+                        <h4>🎨 Board Theme</h4>
+                        <div class="theme-grid">
+                            <div class="theme-option" data-theme="green">
+                                <input type="radio" name="boardTheme" id="greenTheme" value="green" checked>
+                                <label for="greenTheme">
+                                    <div class="theme-preview green-preview"></div>
+                                    <div class="theme-name">Classic Green</div>
+                                </label>
+                            </div>
+                            <div class="theme-option" data-theme="blue">
+                                <input type="radio" name="boardTheme" id="blueTheme" value="blue">
+                                <label for="blueTheme">
+                                    <div class="theme-preview blue-preview"></div>
+                                    <div class="theme-name">Ocean Blue</div>
+                                </label>
+                            </div>
+                            <div class="theme-option" data-theme="purple">
+                                <input type="radio" name="boardTheme" id="purpleTheme" value="purple">
+                                <label for="purpleTheme">
+                                    <div class="theme-preview purple-preview"></div>
+                                    <div class="theme-name">Royal Purple</div>
+                                </label>
+                            </div>
+                            <div class="theme-option" data-theme="brown">
+                                <input type="radio" name="boardTheme" id="brownTheme" value="brown">
+                                <label for="brownTheme">
+                                    <div class="theme-preview brown-preview"></div>
+                                    <div class="theme-name">Wood Brown</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Time Control Selection -->
+                    <div class="time-control-section">
+                        <h4>⏱️ Select Time Control</h4>
+                        <div class="time-control-grid">
+                            <div class="time-control-option" data-control="bullet">
+                                <input type="radio" name="timeControl" id="bulletTime" value="bullet">
+                                <label for="bulletTime">
+                                    <div class="control-name">⚡ Bullet</div>
+                                    <div class="control-time">1+0</div>
+                                    <div class="control-desc">1 minute</div>
+                                </label>
+                            </div>
+                            <div class="time-control-option" data-control="blitz">
+                                <input type="radio" name="timeControl" id="blitzTime" value="blitz" checked>
+                                <label for="blitzTime">
+                                    <div class="control-name">🔥 Blitz</div>
+                                    <div class="control-time">3+2</div>
+                                    <div class="control-desc">3 min + 2 sec</div>
+                                </label>
+                            </div>
+                            <div class="time-control-option" data-control="rapid">
+                                <input type="radio" name="timeControl" id="rapidTime" value="rapid">
+                                <label for="rapidTime">
+                                    <div class="control-name">⚙️ Rapid</div>
+                                    <div class="control-time">10+0</div>
+                                    <div class="control-desc">10 minutes</div>
+                                </label>
+                            </div>
+                            <div class="time-control-option" data-control="classical">
+                                <input type="radio" name="timeControl" id="classicalTime" value="classical">
+                                <label for="classicalTime">
+                                    <div class="control-name">🏛️ Classical</div>
+                                    <div class="control-time">30+0</div>
+                                    <div class="control-desc">30 minutes</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-mode-grid">
+                        <div class="mode-card" id="publicMatchCard">
+                            <div class="mode-icon">🌐</div>
+                            <h4>Public Match</h4>
+                            <p>Play against a random opponent</p>
+                            <button class="btn btn-large btn-primary" id="publicModeBtn">Find Match</button>
+                            <div class="sound-toggle">
+                                <label>
+                                    <input type="checkbox" id="soundToggle" checked>
+                                    🔊 Sound Effects
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="mode-card" id="privateGameCard">
+                            <div class="mode-icon">🔒</div>
+                            <h4>Private Game</h4>
+                            <p>Play with a friend using a code</p>
+                            <button class="btn btn-large btn-secondary" id="createPrivateBtn">Create Game</button>
+                            <div class="join-code-inline">
+                                <input type="text" id="gameCodeInput" placeholder="Enter code" maxlength="6">
+                                <button class="btn btn-primary" id="joinWithCodeBtn">Join</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- End Main Content -->
+
+                <!-- Sidebar Column -->
+                <div class="dashboard-sidebar">
+                    <!-- Leaderboard Section -->
+                    <div class="leaderboard-section">
+                    <h3>🏆 Top Players</h3>
+                    <div class="leaderboard-list" id="homeLeaderboardList">
+                        <div class="loading">Loading...</div>
+                    </div>
+                </div>
+                </div>
+                <!-- End Sidebar -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screen (shown when in a game) -->
+    <div class="game-screen hidden" id="gameScreen">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="game-header-left">
+                <img src="images/Logo.png" alt="Chess Logo" class="game-logo">
+                <span class="game-username" id="gameUsernameDisplay">Player</span>
+                <span class="game-elo" id="gameEloDisplay">1200</span>
+            </div>
+            <button class="btn-leave" id="leaveGameBtn">Leave</button>
+        </header>
+
+        <!-- Main Game Area -->
+        <div class="game-main">
+            <!-- Left Sidebar -->
+            <div class="game-sidebar-left">
+                <!-- Opponent Section -->
+                <div class="opponent-section">
+                    <div class="timer opponent-timer" id="opponentTimer">
+                        <span class="timer-label">Opponent</span>
+                        <span class="timer-value">3:00</span>
+                    </div>
+                    <div class="captured-display" id="capturedBlack">
+                        <span class="capture-label">Captured Pieces:</span>
+                        <div class="pieces-list"></div>
+                        <span class="score-display" id="blackScore">0</span>
+                    </div>
+                </div>
+                
+                <!-- Player Section -->
+                <div class="player-section">
+                    <div class="captured-display" id="capturedWhite">
+                        <span class="capture-label">Captured Pieces:</span>
+                        <div class="pieces-list"></div>
+                        <span class="score-display" id="whiteScore">0</span>
+                    </div>
+                    <div class="timer player-timer active" id="playerTimer">
+                        <span class="timer-label">You</span>
+                        <span class="timer-value">3:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Board Area -->
+            <div class="game-center" id="gameCenter">
+                <div class="board-toolbar">
+                    <div class="turn-indicator" id="turnIndicator">Waiting for opponent...</div>
+                    <button type="button" class="board-toggle" id="boardFullscreenToggle" aria-pressed="false" aria-label="Maximize board">
+                        <span class="toggle-icon" aria-hidden="true">[+]</span>
+                        <span class="toggle-label">Maximize</span>
+                    </button>
+                </div>
+                <div id="checkIndicator" class="check-indicator hidden">⚠️ Check!</div>
+                <div class="board-with-coords">
+                    <div class="coord-files board-coords" id="coordFilesTop"></div>
+                    <div class="coord-ranks left board-coords" id="coordRanksLeft"></div>
+                    <div class="chessboard" id="chessboard"></div>
+                    <div class="coord-ranks right board-coords" id="coordRanksRight"></div>
+                    <div class="coord-files board-coords" id="coordFilesBottom"></div>
+                </div>
+                <div class="game-messages" id="gameMessages"></div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="game-sidebar-right">
+                <!-- Move History Panel -->
+                <div class="move-history-panel">
+                    <h3>📜 Move History</h3>
+                    <div class="move-history-list" id="moveHistoryList">
+                        <div class="no-moves">No moves yet</div>
+                    </div>
+                </div>
+
+                <!-- Chat Panel -->
+                <div class="chat-panel">
+                    <h3>💬 Chat</h3>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="chat-info">Chat with your opponent</div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" id="chatInput" placeholder="Type a message..." maxlength="200">
+                        <button class="btn-send" id="sendChatBtn">Send</button>
+                    </div>
+                    <div class="quick-messages">
+                        <button class="quick-msg" data-msg="Good luck! 😊">GL 😊</button>
+                        <button class="quick-msg" data-msg="Nice move! 👍">Nice 👍</button>
+                        <button class="quick-msg" data-msg="Well played! 🎉">WP 🎉</button>
+                        <button class="quick-msg" data-msg="Thanks! 😄">Thanks 😄</button>
+                    </div>
+                </div>
+
+                <div class="game-controls">
+                    <button class="btn-control" id="undoBtn" disabled>↩️ Undo</button>
+                    <button class="btn-control" id="drawBtn" disabled>🤝 Draw</button>
+                    <button class="btn-control" id="surrenderBtn" disabled>🏳️ Surrender</button>
+                    <button class="btn-control hidden" id="rematchBtn">🔄 Rematch</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Game Code Display -->
+    <div class="modal hidden" id="gameCodeModal">
+        <div class="modal-content">
+            <h2>🎮 Game Created!</h2>
+            <p>Share this code with your friend:</p>
+            <div class="game-code-display">
+                <span id="displayGameCode">ABC123</span>
+                <button class="btn btn-copy" id="copyCodeBtn">📋 Copy</button>
+            </div>
+            <p class="waiting-text">Waiting for opponent to join...</p>
+            <button class="btn btn-secondary" id="closeCodeModal">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for Pawn Promotion -->
+    <div class="modal hidden" id="promotionModal">
+        <div class="modal-content">
+            <h2>Promote Pawn</h2>
+            <p>Choose a piece:</p>
+            <div class="promotion-choices">
+                <div class="promotion-piece" data-piece="queen">
+                    <img src="" alt="Queen" id="promoteQueen">
+                    <span>Queen</span>
+                </div>
+                <div class="promotion-piece" data-piece="rook">
+                    <img src="" alt="Rook" id="promoteRook">
+                    <span>Rook</span>
+                </div>
+                <div class="promotion-piece" data-piece="bishop">
+                    <img src="" alt="Bishop" id="promoteBishop">
+                    <span>Bishop</span>
+                </div>
+                <div class="promotion-piece" data-piece="knight">
+                    <img src="" alt="Knight" id="promoteKnight">
+                    <span>Knight</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Confirmations -->
+    <div class="modal hidden" id="confirmationModal">
+        <div class="modal-content">
+            <h2 id="confirmTitle">Confirmation</h2>
+            <p id="confirmMessage">Are you sure?</p>
+            <div class="modal-buttons">
+                <button class="btn btn-primary" id="confirmYes">Yes</button>
+                <button class="btn btn-secondary" id="confirmNo">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Endgame -->
+    <div class="modal hidden" id="endgameModal">
+        <div class="modal-content endgame-modal">
+            <div class="endgame-icon" id="endgameIcon">👑</div>
+            <h2 id="endgameTitle">Game Over</h2>
+            <p id="endgameMessage">The game has ended.</p>
+            
+            <!-- Rematch Request Notification -->
+            <div class="rematch-notification hidden" id="rematchNotification">
+                <div class="rematch-notification-content">
+                    <p class="rematch-text">🔄 <strong id="rematchRequester">Opponent</strong> wants a rematch!</p>
+                    <div class="rematch-notification-buttons">
+                        <button class="btn btn-primary btn-sm" id="acceptRematchBtn">✓ Accept</button>
+                        <button class="btn btn-secondary btn-sm" id="declineRematchBtn">✗ Decline</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Waiting for Response -->
+            <div class="rematch-waiting hidden" id="rematchWaiting">
+                <p class="rematch-waiting-text">⏳ Waiting for opponent's response...</p>
+            </div>
+            
+            <div class="modal-buttons" id="endgameButtons">
+                <button class="btn btn-primary" id="rematchModalBtn">🔄 Rematch</button>
+                <button class="btn btn-primary" id="newGameBtn">New Game</button>
+                <button class="btn btn-secondary" id="homeBtn">Home</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden elements for compatibility -->
+    <div style="display:none;">
+        <div id="gameStatus"></div>
+        <div id="yourColor"></div>
+        <div id="opponentName"></div>
+        <div id="playerColor"></div>
+        <div id="materialAdvantage"><div class="advantage-display"></div></div>
+    </div>
+    <!-- Scripts -->
+    <script src="js/sounds.js"></script>
+    <script src="js/websocket.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
+

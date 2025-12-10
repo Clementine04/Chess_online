@@ -5,46 +5,96 @@
 }
 
 :root {
-    /* Royal Blue and Yellow - Clean & Modern */
-    --primary-color: #1e3a8a; /* Royal Blue */
-    --secondary-color: #d4af37; /* Gold */
-    --accent-blue: #2563eb; /* Bright Blue */
-    --accent-yellow: #fbbf24; /* Yellow */
-    --success-color: #22c55e;
-    --danger-color: #ef4444;
-    --warning-color: #f59e0b;
-    --light-square: #d4d4b8; /* Green-Beige */
-    --dark-square: #5a7a44; /* Forest Green */
-    --bg-color: #0f172a; /* Deep Navy */
-    --bg-gradient-start: #0f172a;
-    --bg-gradient-end: #1e293b;
-    --card-bg: rgba(30, 58, 138, 0.15);
-    --card-border: rgba(212, 175, 55, 0.2);
-    --text-color: #f1f5f9;
-    --text-secondary: #cbd5e1;
-    --border-color: rgba(212, 175, 55, 0.25);
-    --glass-bg: rgba(30, 58, 138, 0.08);
-    --glass-border: rgba(212, 175, 55, 0.15);
-    --shadow-color: rgba(0, 0, 0, 0.2);
+    /* Lilac & Lavender Theme - Dark Mode */
+    --primary-color: #9333EA;
+    /* Vivid Purple */
+    --secondary-color: #C084FC;
+    /* Soft Lilac */
+    --accent-color: #D8B4FE;
+    /* Light Lavender Accent */
+    --accent-hover: #E9D5FF;
+    /* Lighter Lavender */
+    --accent-glow: rgba(192, 132, 252, 0.6);
+    --success-color: #86EFAC;
+    /* Mint Green */
+    --danger-color: #FDA4AF;
+    /* Soft Rose */
+    --warning-color: #FDE68A;
+    /* Soft Yellow */
+    --light-square: #EDE9FE;
+    /* Soft Lavender */
+    --dark-square: #8B5CF6;
+    /* Vivid Purple */
+    --bg-color: #1A1625;
+    /* Deep Purple Night */
+    --bg-gradient-start: #1A1625;
+    --bg-gradient-end: #2D2640;
+    --bg-gradient-accent: #3B2462;
+    --card-bg: rgba(139, 92, 246, 0.12);
+    --card-bg-solid: #251D35;
+    --card-border: rgba(192, 132, 252, 0.25);
+    --text-color: #F5F3FF;
+    --text-secondary: #DDD6FE;
+    --text-muted: #A78BFA;
+    --border-color: rgba(192, 132, 252, 0.3);
+    --glass-bg: rgba(139, 92, 246, 0.08);
+    --glass-border: rgba(192, 132, 252, 0.2);
+    --shadow-color: rgba(88, 28, 135, 0.4);
+    --shadow-glow: rgba(167, 139, 250, 0.3);
+    --btn-primary-bg: linear-gradient(135deg, #9333EA 0%, #7C3AED 100%);
+    --btn-primary-hover: linear-gradient(135deg, #A855F7 0%, #8B5CF6 100%);
+    --btn-secondary-bg: transparent;
+    --btn-secondary-border: #C084FC;
+    --input-bg: rgba(45, 38, 64, 0.8);
+    --input-border: rgba(192, 132, 252, 0.3);
+    --input-focus: #A855F7;
 }
 
 body.theme-light {
-    --bg-color: #edf2fb;
-    --bg-gradient-start: #f7fafc;
-    --bg-gradient-end: #dce5f4;
-    --card-bg: #ffffff;
-    --card-border: rgba(15, 23, 42, 0.1);
-    --text-color: #0b1224;
-    --text-secondary: #3b4a63;
-    --border-color: rgba(15, 23, 42, 0.15);
-    --glass-bg: rgba(255, 255, 255, 0.92);
-    --glass-border: rgba(15, 23, 42, 0.1);
-    --shadow-color: rgba(15, 23, 42, 0.14);
-    --light-square: #f7f1e6;
-    --dark-square: #c59a6d;
-    --accent-blue: #2563eb;
-    --accent-yellow: #c27803;
-    --secondary-color: #d97706;
+    /* Lilac & Lavender Theme - Light Mode */
+    --primary-color: #7C3AED;
+    /* Deep Violet */
+    --secondary-color: #9333EA;
+    /* Purple */
+    --accent-color: #6D28D9;
+    /* Dark Violet Accent */
+    --accent-hover: #5B21B6;
+    /* Darker Violet */
+    --accent-glow: rgba(124, 58, 237, 0.3);
+    --success-color: #10B981;
+    /* Emerald */
+    --danger-color: #F43F5E;
+    /* Rose */
+    --warning-color: #F59E0B;
+    /* Amber */
+    --bg-color: #FAF5FF;
+    /* Lightest Lilac */
+    --bg-gradient-start: #FEFBFF;
+    --bg-gradient-end: #F3E8FF;
+    --bg-gradient-accent: #EDE9FE;
+    --card-bg: #FFFFFF;
+    --card-bg-solid: #FFFFFF;
+    --card-border: rgba(139, 92, 246, 0.2);
+    --text-color: #2E1065;
+    /* Deep Purple Text */
+    --text-secondary: #5B21B6;
+    --text-muted: #7C3AED;
+    --border-color: rgba(139, 92, 246, 0.25);
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --glass-border: rgba(139, 92, 246, 0.15);
+    --shadow-color: rgba(88, 28, 135, 0.15);
+    --shadow-glow: rgba(139, 92, 246, 0.2);
+    --light-square: #F5F3FF;
+    /* Very Light Lavender */
+    --dark-square: #A78BFA;
+    /* Medium Lavender */
+    --btn-primary-bg: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+    --btn-primary-hover: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+    --btn-secondary-bg: transparent;
+    --btn-secondary-border: #7C3AED;
+    --input-bg: #FFFFFF;
+    --input-border: rgba(139, 92, 246, 0.3);
+    --input-focus: #7C3AED;
 }
 
 body {
@@ -68,11 +118,11 @@ body {
 }
 
 .glass-strong {
-    background: rgba(30, 58, 138, 0.12);
+    background: rgba(139, 92, 246, 0.12);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(192, 132, 252, 0.25);
+    box-shadow: 0 2px 12px 0 rgba(88, 28, 135, 0.3);
 }
 
 .container {
@@ -114,7 +164,10 @@ body {
 
 .auth-header h1 {
     font-size: 3rem;
-    color: var(--accent-yellow);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 10px;
     font-weight: 700;
 }
@@ -163,22 +216,22 @@ body.theme-light .home-dashboard {
 
 /* Welcome Section - Hero Style */
 .welcome-section {
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, rgba(212, 175, 55, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.25) 0%, rgba(192, 132, 252, 0.2) 100%);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 8px 32px rgba(88, 28, 135, 0.3);
+    border: 1px solid rgba(192, 132, 252, 0.35);
     position: relative;
     overflow: hidden;
     grid-column: 1 / -1;
 }
 
 body.theme-light .welcome-section {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, rgba(217, 119, 6, 0.12) 100%);
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(192, 132, 252, 0.08) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    box-shadow: 0 10px 28px rgba(88, 28, 135, 0.1);
 }
 
 .welcome-section::before {
@@ -188,14 +241,14 @@ body.theme-light .welcome-section {
     right: -50%;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(251, 191, 36, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(192, 132, 252, 0.15) 0%, transparent 70%);
     pointer-events: none;
 }
 
 .welcome-section h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    background: linear-gradient(135deg, var(--accent-yellow) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -204,7 +257,7 @@ body.theme-light .welcome-section {
 }
 
 body.theme-light .welcome-section h2 {
-    background: linear-gradient(135deg, #0b1224 0%, #3b4a63 100%);
+    background: linear-gradient(135deg, #6D28D9 0%, #9333EA 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -217,7 +270,7 @@ body.theme-light .welcome-section h2 {
 }
 
 .stat-card {
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(45, 38, 64, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 25px 20px;
@@ -225,7 +278,7 @@ body.theme-light .welcome-section h2 {
     text-align: center;
     border: 2px solid transparent;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(88, 28, 135, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -237,7 +290,7 @@ body.theme-light .welcome-section h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.15) 0%, rgba(139, 92, 246, 0.08) 100%);
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -248,14 +301,14 @@ body.theme-light .welcome-section h2 {
 
 .stat-card:hover {
     transform: translateY(-8px) scale(1.02);
-    border-color: var(--accent-yellow);
-    box-shadow: 0 8px 30px rgba(251, 191, 36, 0.4);
+    border-color: var(--secondary-color);
+    box-shadow: 0 8px 30px rgba(192, 132, 252, 0.5);
 }
 
 .stat-value {
     font-size: 3rem;
     font-weight: 900;
-    background: linear-gradient(135deg, var(--accent-yellow) 0%, #fff 100%);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -269,23 +322,23 @@ body.theme-light .welcome-section h2 {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 600;
-    color: var(--text-secondary);
+    color: #FFFFFF;
 }
 
 .play-section {
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.2) 0%, rgba(52, 152, 219, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(192, 132, 252, 0.1) 100%);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 35px;
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(52, 152, 219, 0.3);
+    box-shadow: 0 8px 32px var(--shadow-color);
+    border: 1px solid rgba(192, 132, 252, 0.25);
 }
 
 .play-section h3 {
     font-size: 1.8rem;
     margin-bottom: 30px;
-    background: linear-gradient(135deg, var(--accent-yellow) 0%, var(--accent-blue) 100%);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -299,16 +352,16 @@ body.theme-light .welcome-section h2 {
 }
 
 .mode-card {
-    background: rgba(15, 23, 42, 0.7);
+    background: rgba(45, 38, 64, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 2px solid rgba(52, 152, 219, 0.3);
+    border: 2px solid rgba(192, 132, 252, 0.3);
     border-radius: 18px;
     padding: 35px 25px;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px var(--shadow-color);
     position: relative;
     overflow: hidden;
 }
@@ -320,7 +373,7 @@ body.theme-light .welcome-section h2 {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(192, 132, 252, 0.25), transparent);
     transition: left 0.5s;
 }
 
@@ -336,33 +389,33 @@ body.theme-light .welcome-section h2 {
 
 .mode-card:hover {
     transform: translateY(-10px) scale(1.03);
-    border-color: var(--accent-yellow);
-    box-shadow: 0 12px 40px rgba(251, 191, 36, 0.5);
+    border-color: var(--secondary-color);
+    box-shadow: 0 12px 40px var(--accent-glow);
 }
 
 .mode-icon {
     font-size: 4.5rem;
     margin-bottom: 20px;
-    filter: drop-shadow(0 4px 8px rgba(251, 191, 36, 0.3));
+    filter: drop-shadow(0 4px 8px rgba(192, 132, 252, 0.4));
     transition: all 0.3s;
 }
 
 .mode-card:hover .mode-icon {
     transform: scale(1.1) rotateY(10deg);
-    filter: drop-shadow(0 8px 16px rgba(251, 191, 36, 0.6));
+    filter: drop-shadow(0 8px 16px var(--accent-glow));
 }
 
 .mode-card h4 {
     font-size: 1.6rem;
     margin-bottom: 12px;
-    color: var(--accent-yellow);
+    color: var(--secondary-color);
     font-weight: 700;
 }
 
 .mode-card p {
-    opacity: 0.85;
+    opacity: 0.95;
     margin-bottom: 25px;
-    color: var(--text-secondary);
+    color: #FFFFFF;
     font-size: 0.95rem;
 }
 
@@ -397,7 +450,7 @@ body.theme-light .welcome-section h2 {
 
 .btn-large:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.5);
+    box-shadow: 0 8px 25px var(--accent-glow);
 }
 
 .join-code-inline {
@@ -429,7 +482,7 @@ body.theme-light .welcome-section h2 {
 .sound-toggle {
     margin-top: 15px;
     padding: 10px;
-    background: rgba(52, 152, 219, 0.1);
+    background: rgba(139, 92, 246, 0.1);
     border-radius: 8px;
     text-align: center;
 }
@@ -450,13 +503,13 @@ body.theme-light .welcome-section h2 {
 }
 
 .leaderboard-section {
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.25) 0%, rgba(106, 76, 147, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(167, 139, 250, 0.15) 100%);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 8px 32px var(--shadow-color);
+    border: 1px solid rgba(192, 132, 252, 0.3);
     position: sticky;
     top: 20px;
 }
@@ -464,7 +517,7 @@ body.theme-light .welcome-section h2 {
 .leaderboard-section h3 {
     font-size: 1.6rem;
     margin-bottom: 25px;
-    background: linear-gradient(135deg, var(--accent-yellow) 0%, #fff 100%);
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -494,7 +547,7 @@ body.theme-light .welcome-section h2 {
 
 .elo-display {
     font-size: 0.9rem;
-    color: var(--accent-yellow);
+    color: var(--secondary-color);
     font-weight: bold;
 }
 
@@ -507,12 +560,12 @@ body.theme-light .welcome-section h2 {
 .time-control-section {
     margin-bottom: 30px;
     padding: 25px;
-    background: rgba(15, 23, 42, 0.5);
+    background: rgba(45, 38, 64, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
-    border: 2px solid rgba(52, 152, 219, 0.3);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(192, 132, 252, 0.25);
+    box-shadow: 0 4px 15px var(--shadow-color);
 }
 
 @media (max-width: 768px) {
@@ -557,7 +610,7 @@ body.theme-light .welcome-section h2 {
     text-align: center;
 }
 
-.time-control-option input[type="radio"]:checked + label {
+.time-control-option input[type="radio"]:checked+label {
     background: rgba(251, 191, 36, 0.15);
     border-color: var(--accent-yellow);
     transform: scale(1.02);
@@ -574,18 +627,20 @@ body.theme-light .welcome-section h2 {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #FFFFFF;
 }
 
 .control-time {
     font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 3px;
-    color: var(--text-color);
+    color: #FFFFFF;
 }
 
 .control-desc {
     font-size: 0.75rem;
-    opacity: 0.8;
+    opacity: 0.95;
+    color: #FFFFFF;
 }
 
 /* Timers */
@@ -613,14 +668,22 @@ body.theme-light .welcome-section h2 {
 }
 
 @keyframes timerWarning {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.85; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.85;
+    }
 }
 
 .timer-label {
     font-size: 0.9rem;
     font-weight: 600;
-    opacity: 0.8;
+    opacity: 0.95;
+    color: #FFFFFF;
 }
 
 .timer-value {
@@ -645,8 +708,9 @@ body.theme-light .welcome-section h2 {
 .capture-label {
     font-size: 0.85rem;
     font-weight: 600;
-    opacity: 0.8;
+    opacity: 0.95;
     white-space: nowrap;
+    color: #FFFFFF;
 }
 
 .captured-display .pieces-list {
@@ -718,8 +782,15 @@ body.theme-light .welcome-section h2 {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
 }
 
 /* Game Screen Layout */
@@ -1000,8 +1071,8 @@ body.theme-light .time-control-option label {
     color: #0b1224;
 }
 
-body.theme-light .theme-option input[type="radio"]:checked + label,
-body.theme-light .time-control-option input[type="radio"]:checked + label {
+body.theme-light .theme-option input[type="radio"]:checked+label,
+body.theme-light .time-control-option input[type="radio"]:checked+label {
     background: #fff8e5;
     border-color: #e3b505;
     color: #0b1224;
@@ -1129,8 +1200,8 @@ body.theme-light .game-messages {
 
 .player-stats {
     font-size: 0.85rem;
-    opacity: 0.85;
-    color: var(--text-secondary);
+    opacity: 0.95;
+    color: #FFFFFF;
 }
 
 .player-rating {
@@ -1153,9 +1224,19 @@ body.theme-light .game-messages {
 }
 
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    75% { transform: translateX(5px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
 }
 
 .hidden {
@@ -1232,8 +1313,8 @@ body.theme-light .game-messages {
     user-select: none;
     font-weight: bold;
     font-size: 0.9rem;
-    color: var(--text-color);
-    opacity: 0.7;
+    color: #FFFFFF;
+    opacity: 0.9;
 }
 
 .coord-files {
@@ -1417,7 +1498,7 @@ body.board-fullscreen-active .coord-ranks {
         right: 50%;
         transform: translate(50%, 0);
     }
-    
+
     body.board-fullscreen-active .board-with-coords {
         width: min(98vmin, calc(100vw - 4px), calc(100vh - 4px));
     }
@@ -1431,8 +1512,15 @@ body.board-fullscreen-active .coord-ranks {
 }
 
 @keyframes checkPulse {
-    0%, 100% { background-color: rgba(231, 76, 60, 0.5); }
-    50% { background-color: rgba(231, 76, 60, 0.8); }
+
+    0%,
+    100% {
+        background-color: rgba(231, 76, 60, 0.5);
+    }
+
+    50% {
+        background-color: rgba(231, 76, 60, 0.8);
+    }
 }
 
 /* Game Controls */
@@ -1619,6 +1707,7 @@ body.theme-light .theme-toggle {
 .volume-control label {
     font-size: 0.9rem;
     font-weight: 600;
+    color: #FFFFFF;
 }
 
 .volume-control input[type="range"] {
@@ -1840,9 +1929,10 @@ body.theme-light .theme-toggle {
 
 .waiting-text {
     font-style: italic;
-    opacity: 0.8;
+    opacity: 0.95;
     margin: 20px 0;
     animation: pulse 2s infinite;
+    color: #FFFFFF;
 }
 
 /* Promotion Modal */
@@ -1956,6 +2046,7 @@ body.theme-light .theme-toggle {
 
 .auth-info p {
     margin: 5px 0;
+    color: #FFFFFF;
 }
 
 /* Endgame Modal */
@@ -1975,9 +2066,11 @@ body.theme-light .theme-toggle {
         transform: scale(0);
         opacity: 0;
     }
+
     50% {
         transform: scale(1.2);
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
@@ -2011,6 +2104,7 @@ body.theme-light .theme-toggle {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -2059,13 +2153,13 @@ body.theme-light .theme-toggle {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .game-sidebar-left {
         width: 100%;
         max-width: 600px;
         display: contents;
     }
-    
+
     .opponent-section {
         order: 1;
         border-bottom: none;
@@ -2075,12 +2169,12 @@ body.theme-light .theme-toggle {
         gap: 10px;
         width: 100%;
     }
-    
+
     .game-center {
         width: 100%;
         order: 2;
     }
-    
+
     .player-section {
         order: 3;
         border-top: none;
@@ -2090,7 +2184,7 @@ body.theme-light .theme-toggle {
         gap: 10px;
         width: 100%;
     }
-    
+
     .game-sidebar-right {
         width: 100%;
         max-width: 600px;
@@ -2098,58 +2192,58 @@ body.theme-light .theme-toggle {
         display: flex;
         flex-direction: column;
     }
-    
+
     /* Reorder controls to be first on mobile (right after board) */
     .game-controls {
         order: 1;
     }
-    
+
     .move-history-panel {
         order: 2;
     }
-    
+
     .chat-panel {
         order: 3;
     }
-    
+
     .board-with-coords {
         width: 100%;
         max-width: 600px;
     }
-    
+
     .chessboard {
         width: 100%;
         height: auto;
         aspect-ratio: 1 / 1;
     }
-    
+
     .coord-files {
         width: 100%;
     }
-    
+
     .coord-ranks {
         height: 100%;
     }
-    
+
     .coord-ranks.left,
     .coord-ranks.right {
         position: relative;
         left: 0;
         right: 0;
     }
-    
+
     .board-with-coords {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .game-controls {
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
     }
-    
+
     .btn-control {
         flex: 1;
         min-width: 120px;
@@ -2165,83 +2259,83 @@ body.theme-light .theme-toggle {
         width: 35px;
         height: 35px;
     }
-    
+
     .game-username {
         font-size: 0.9rem;
     }
-    
+
     .game-elo {
         font-size: 0.8rem;
     }
-    
+
     .btn-leave {
         padding: 6px 12px;
         font-size: 0.9rem;
     }
-    
+
     .game-main {
         padding: 15px 10px;
         gap: 12px;
     }
-    
+
     .game-sidebar-left {
         gap: 12px;
     }
-    
+
     .opponent-section,
     .player-section {
         gap: 8px;
     }
-    
+
     .board-with-coords,
     .chessboard {
         width: 100%;
         max-width: 100%;
     }
-    
+
     .board-coords {
         display: none;
     }
-    
+
     .game-sidebar-left,
     .game-sidebar-right {
         max-width: 100%;
     }
-    
+
     .timer {
         padding: 10px 15px;
     }
-    
+
     .timer-label {
         font-size: 0.85rem;
     }
-    
+
     .timer-value {
         font-size: 1.2rem;
     }
-    
+
     .turn-indicator {
         font-size: 0.9rem;
         padding: 8px;
     }
-    
+
     .captured-display {
         padding: 6px 12px;
     }
-    
+
     .capture-label {
         font-size: 0.8rem;
     }
-    
+
     .captured-display .pieces-list img {
         width: 24px;
         height: 24px;
     }
-    
+
     .captured-display .score-display {
         font-size: 0.85rem;
     }
-    
+
     /* Make game controls visible and usable on mobile */
     .game-controls {
         display: grid;
@@ -2250,30 +2344,30 @@ body.theme-light .theme-toggle {
         width: 100%;
         margin-top: 10px;
     }
-    
+
     .btn-control {
         padding: 12px 8px;
         font-size: 0.85rem;
         min-width: unset;
         width: 100%;
     }
-    
+
     /* Move history and chat panels - make them scrollable */
     .move-history-panel,
     .chat-panel {
         max-height: 200px;
     }
-    
+
     .game-messages {
         font-size: 0.85rem;
         padding: 8px;
     }
-    
+
     .modal-content {
         min-width: 300px;
         padding: 20px;
     }
-    
+
     .header h1 {
         font-size: 1.8rem;
     }
@@ -2283,57 +2377,57 @@ body.theme-light .theme-toggle {
     .game-header-left {
         gap: 8px;
     }
-    
+
     .game-username {
         display: none;
     }
-    
+
     .game-main {
         padding: 10px 5px;
         gap: 8px;
     }
-    
+
     .chessboard {
         max-width: 100%;
         width: 100%;
         border-width: 2px;
     }
-    
+
     .timer {
         padding: 8px 12px;
     }
-    
+
     .timer-label {
         font-size: 0.8rem;
     }
-    
+
     .timer-value {
         font-size: 1.1rem;
     }
-    
+
     .captured-display {
         padding: 5px 10px;
         gap: 6px;
     }
-    
+
     .capture-label {
         font-size: 0.75rem;
     }
-    
+
     .captured-display .pieces-list img {
         width: 20px;
         height: 20px;
     }
-    
+
     .captured-display .score-display {
         font-size: 0.8rem;
     }
-    
+
     .turn-indicator {
         font-size: 0.85rem;
         padding: 6px;
     }
-    
+
     /* Better mobile controls layout */
     .game-controls {
         display: grid;
@@ -2342,39 +2436,39 @@ body.theme-light .theme-toggle {
         width: 100%;
         margin-top: 8px;
     }
-    
+
     .btn-control {
         padding: 10px 6px;
         font-size: 0.75rem;
         min-width: unset;
         width: 100%;
     }
-    
+
     /* Rematch button spans full width */
     .btn-control#rematchBtn {
         grid-column: 1 / -1;
     }
-    
+
     .game-messages {
         font-size: 0.8rem;
         padding: 6px;
     }
-    
+
     /* Chat and move history */
     .move-history-panel,
     .chat-panel {
         max-height: 150px;
     }
-    
+
     .chat-input-container {
         flex-direction: column;
         gap: 5px;
     }
-    
+
     .chat-input-container input {
         width: 100%;
     }
-    
+
     .btn-send {
         width: 100%;
     }
@@ -2520,6 +2614,7 @@ body.theme-light .theme-toggle {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -2683,7 +2778,7 @@ body.theme-light .theme-toggle {
     transition: all 0.3s;
 }
 
-.theme-option input[type="radio"]:checked + label {
+.theme-option input[type="radio"]:checked+label {
     background: rgba(251, 191, 36, 0.15);
     border-color: var(--accent-yellow);
     transform: scale(1.02);
@@ -2706,39 +2801,39 @@ body.theme-light .theme-toggle {
     overflow: hidden;
 }
 
-.theme-preview > * {
+.theme-preview>* {
     content: '';
 }
 
 /* Green Theme Preview */
 .green-preview {
-    background: linear-gradient(45deg, 
-        #5a7a44 0%, #5a7a44 25%, #d4d4b8 25%, #d4d4b8 50%,
-        #5a7a44 50%, #5a7a44 75%, #d4d4b8 75%, #d4d4b8 100%);
+    background: linear-gradient(45deg,
+            #5a7a44 0%, #5a7a44 25%, #d4d4b8 25%, #d4d4b8 50%,
+            #5a7a44 50%, #5a7a44 75%, #d4d4b8 75%, #d4d4b8 100%);
     background-size: 30px 30px;
 }
 
 /* Blue Theme Preview */
 .blue-preview {
-    background: linear-gradient(45deg, 
-        #2c5f7c 0%, #2c5f7c 25%, #b8d4e8 25%, #b8d4e8 50%,
-        #2c5f7c 50%, #2c5f7c 75%, #b8d4e8 75%, #b8d4e8 100%);
+    background: linear-gradient(45deg,
+            #2c5f7c 0%, #2c5f7c 25%, #b8d4e8 25%, #b8d4e8 50%,
+            #2c5f7c 50%, #2c5f7c 75%, #b8d4e8 75%, #b8d4e8 100%);
     background-size: 30px 30px;
 }
 
 /* Purple Theme Preview */
 .purple-preview {
-    background: linear-gradient(45deg, 
-        #6a4c93 0%, #6a4c93 25%, #d4c5e8 25%, #d4c5e8 50%,
-        #6a4c93 50%, #6a4c93 75%, #d4c5e8 75%, #d4c5e8 100%);
+    background: linear-gradient(45deg,
+            #6a4c93 0%, #6a4c93 25%, #d4c5e8 25%, #d4c5e8 50%,
+            #6a4c93 50%, #6a4c93 75%, #d4c5e8 75%, #d4c5e8 100%);
     background-size: 30px 30px;
 }
 
 /* Brown Theme Preview */
 .brown-preview {
-    background: linear-gradient(45deg, 
-        #8b4513 0%, #8b4513 25%, #deb887 25%, #deb887 50%,
-        #8b4513 50%, #8b4513 75%, #deb887 75%, #deb887 100%);
+    background: linear-gradient(45deg,
+            #8b4513 0%, #8b4513 25%, #deb887 25%, #deb887 50%,
+            #8b4513 50%, #8b4513 75%, #deb887 75%, #deb887 100%);
     background-size: 30px 30px;
 }
 
@@ -2746,6 +2841,7 @@ body.theme-light .theme-toggle {
     font-size: 0.85rem;
     font-weight: 600;
     text-align: center;
+    color: #FFFFFF;
 }
 
 /* Board Theme Classes */
@@ -2800,8 +2896,15 @@ body.theme-light .theme-toggle {
 }
 
 @keyframes premovePulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.6; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
 }
 
 /* ========================================
@@ -2813,39 +2916,39 @@ body.theme-light .theme-toggle {
     .auth-screen {
         padding: 15px;
     }
-    
+
     .auth-header h1 {
         font-size: 2rem;
     }
-    
+
     .auth-header p {
         font-size: 0.95rem;
     }
-    
+
     .auth-box {
         padding: 25px 20px;
     }
-    
+
     .auth-tab {
         font-size: 0.9rem;
         padding: 10px;
     }
-    
+
     .auth-form input {
         padding: 12px;
         font-size: 0.95rem;
     }
-    
+
     .btn-primary {
         padding: 12px 20px;
         font-size: 0.95rem;
     }
-    
+
     .auth-info {
         padding: 12px;
         font-size: 0.85rem;
     }
-    
+
     .modal-content {
         padding: 25px 20px;
         min-width: 90%;
@@ -2857,53 +2960,53 @@ body.theme-light .theme-toggle {
     .auth-screen {
         padding: 10px;
     }
-    
+
     .auth-header h1 {
         font-size: 1.6rem;
     }
-    
+
     .auth-header p {
         font-size: 0.85rem;
     }
-    
+
     .game-logo {
         width: 35px;
         height: 35px;
     }
-    
+
     .auth-box {
         padding: 20px 15px;
         border-radius: 12px;
     }
-    
+
     .auth-tabs {
         gap: 8px;
     }
-    
+
     .auth-tab {
         font-size: 0.85rem;
         padding: 8px;
     }
-    
+
     .auth-form {
         gap: 12px;
     }
-    
+
     .auth-form input {
         padding: 10px;
         font-size: 0.9rem;
     }
-    
+
     .btn-primary {
         padding: 10px 18px;
         font-size: 0.9rem;
     }
-    
+
     .auth-info {
         padding: 10px;
         font-size: 0.8rem;
     }
-    
+
     .auth-info p {
         margin: 3px 0;
     }
@@ -2914,20 +3017,20 @@ body.theme-light .theme-toggle {
     .welcome-section {
         padding: 30px 25px;
     }
-    
+
     .welcome-section h2 {
         font-size: 2rem;
     }
-    
+
     .user-stats {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 15px;
     }
-    
+
     .play-section {
         padding: 25px 20px;
     }
-    
+
     .game-mode-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -2941,204 +3044,204 @@ body.theme-light .theme-toggle {
         gap: 15px;
         align-items: stretch;
     }
-    
+
     .header-brand {
         justify-content: center;
     }
-    
+
     .header h1 {
         font-size: 1.6rem;
     }
-    
+
     .header-right {
         flex-direction: column-reverse;
         gap: 10px;
     }
-    
+
     .user-info {
         align-items: center;
         flex-direction: row;
         justify-content: center;
         gap: 15px;
     }
-    
+
     .username-display {
         font-size: 0.95rem;
     }
-    
+
     .elo-display {
         font-size: 0.85rem;
     }
-    
+
     .btn-sm {
         width: 100%;
         padding: 10px;
     }
-    
+
     .connection-status {
         justify-content: center;
     }
-    
+
     .welcome-section {
         padding: 25px 20px;
     }
-    
+
     .welcome-section h2 {
         font-size: 1.6rem;
         margin-bottom: 20px;
     }
-    
+
     .user-stats {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
-    
+
     .stat-card {
         padding: 18px 15px;
     }
-    
+
     .stat-value {
         font-size: 2rem;
     }
-    
+
     .stat-label {
         font-size: 0.75rem;
         letter-spacing: 1px;
     }
-    
+
     .play-section {
         padding: 20px 15px;
     }
-    
+
     .play-section h3 {
         font-size: 1.4rem;
         margin-bottom: 20px;
     }
-    
+
     .game-mode-grid {
         gap: 15px;
     }
-    
+
     .mode-card {
         padding: 25px 20px;
     }
-    
+
     .mode-icon {
         font-size: 3.5rem;
         margin-bottom: 15px;
     }
-    
+
     .mode-card h4 {
         font-size: 1.3rem;
         margin-bottom: 10px;
     }
-    
+
     .mode-card p {
         font-size: 0.9rem;
         margin-bottom: 20px;
     }
-    
+
     .btn-large {
         padding: 14px 30px;
         font-size: 1rem;
         margin-bottom: 12px;
     }
-    
+
     .join-code-inline {
         flex-direction: column;
         gap: 8px;
     }
-    
+
     .join-code-inline input {
         padding: 12px;
         font-size: 0.95rem;
     }
-    
+
     .join-code-inline button {
         padding: 12px 20px;
         width: 100%;
     }
-    
+
     .time-control-section {
         padding: 20px 15px;
     }
-    
+
     .time-control-section h4 {
         font-size: 1.1rem;
         margin-bottom: 15px;
     }
-    
+
     .time-control-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
-    
+
     .time-control-option label {
         padding: 12px 8px;
     }
-    
+
     .control-name {
         font-size: 0.9rem;
     }
-    
+
     .control-time {
         font-size: 1rem;
     }
-    
+
     .control-desc {
         font-size: 0.7rem;
     }
-    
+
     .leaderboard-section {
         padding: 20px;
     }
-    
+
     .leaderboard-section h3 {
         font-size: 1.3rem;
         margin-bottom: 20px;
     }
-    
+
     .leaderboard-item {
         padding: 12px;
         margin-bottom: 8px;
     }
-    
+
     .player-rank {
         font-size: 1.1rem;
         min-width: 30px;
         margin-right: 12px;
     }
-    
+
     .player-name {
         font-size: 0.9rem;
     }
-    
+
     .player-stats {
         font-size: 0.8rem;
     }
-    
+
     .theme-selection-section {
         padding: 20px 15px;
     }
-    
+
     .theme-selection-section h4 {
         font-size: 1.1rem;
     }
-    
+
     .theme-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
-    
+
     .theme-option label {
         padding: 10px;
     }
-    
+
     .theme-preview {
         width: 50px;
         height: 50px;
     }
-    
+
     .theme-name {
         font-size: 0.8rem;
     }
@@ -3148,200 +3251,200 @@ body.theme-light .theme-toggle {
     .header {
         padding: 12px 15px;
     }
-    
+
     .header h1 {
         font-size: 1.3rem;
     }
-    
+
     .header-brand {
         gap: 10px;
     }
-    
+
     .game-logo {
         width: 30px;
         height: 30px;
     }
-    
+
     .username-display {
         font-size: 0.85rem;
     }
-    
+
     .elo-display {
         font-size: 0.75rem;
     }
-    
+
     .connection-status {
         font-size: 0.8rem;
     }
-    
+
     .status-indicator {
         width: 10px;
         height: 10px;
     }
-    
+
     .welcome-section {
         padding: 20px 15px;
         border-radius: 15px;
     }
-    
+
     .welcome-section h2 {
         font-size: 1.3rem;
         margin-bottom: 15px;
     }
-    
+
     .user-stats {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
-    
+
     .stat-card {
         padding: 15px 10px;
         border-radius: 12px;
     }
-    
+
     .stat-value {
         font-size: 1.6rem;
         margin-bottom: 6px;
     }
-    
+
     .stat-label {
         font-size: 0.7rem;
         letter-spacing: 0.8px;
     }
-    
+
     .play-section {
         padding: 18px 12px;
         border-radius: 15px;
     }
-    
+
     .play-section h3 {
         font-size: 1.2rem;
         margin-bottom: 18px;
     }
-    
+
     .game-mode-grid {
         gap: 12px;
     }
-    
+
     .mode-card {
         padding: 20px 15px;
         border-radius: 15px;
     }
-    
+
     .mode-icon {
         font-size: 3rem;
         margin-bottom: 12px;
     }
-    
+
     .mode-card h4 {
         font-size: 1.2rem;
         margin-bottom: 8px;
     }
-    
+
     .mode-card p {
         font-size: 0.85rem;
         margin-bottom: 18px;
     }
-    
+
     .btn-large {
         padding: 12px 24px;
         font-size: 0.95rem;
         margin-bottom: 10px;
     }
-    
+
     .time-control-section {
         padding: 15px 12px;
     }
-    
+
     .time-control-section h4 {
         font-size: 1rem;
         margin-bottom: 12px;
     }
-    
+
     .time-control-grid {
         grid-template-columns: 1fr 1fr;
         gap: 8px;
     }
-    
+
     .time-control-option label {
         padding: 10px 6px;
     }
-    
+
     .control-name {
         font-size: 0.8rem;
     }
-    
+
     .control-time {
         font-size: 0.95rem;
     }
-    
+
     .control-desc {
         font-size: 0.65rem;
     }
-    
+
     .leaderboard-section {
         padding: 15px;
         border-radius: 15px;
     }
-    
+
     .leaderboard-section h3 {
         font-size: 1.2rem;
         margin-bottom: 15px;
     }
-    
+
     .leaderboard-item {
         padding: 10px;
         margin-bottom: 6px;
         border-radius: 10px;
     }
-    
+
     .player-rank {
         font-size: 1rem;
         min-width: 25px;
         margin-right: 10px;
     }
-    
+
     .player-name {
         font-size: 0.85rem;
     }
-    
+
     .player-stats {
         font-size: 0.75rem;
     }
-    
+
     .sound-toggle {
         padding: 8px;
         margin-top: 10px;
     }
-    
+
     .sound-toggle label {
         font-size: 0.85rem;
         gap: 6px;
     }
-    
+
     .sound-toggle input[type="checkbox"] {
         width: 16px;
         height: 16px;
     }
-    
+
     .theme-selection-section {
         padding: 15px 12px;
     }
-    
+
     .theme-grid {
         gap: 8px;
     }
-    
+
     .theme-option label {
         padding: 8px;
         gap: 6px;
     }
-    
+
     .theme-preview {
         width: 40px;
         height: 40px;
     }
-    
+
     .theme-name {
         font-size: 0.75rem;
     }
@@ -3353,49 +3456,49 @@ body.theme-light .theme-toggle {
         padding: 12px;
         max-height: 250px;
     }
-    
+
     .chat-panel h3 {
         font-size: 0.95rem;
         margin-bottom: 8px;
     }
-    
+
     .chat-messages {
         height: 150px;
         padding: 8px;
     }
-    
+
     .chat-message {
         padding: 6px 10px;
         font-size: 0.85rem;
         max-width: 90%;
     }
-    
+
     .chat-message .sender {
         font-size: 0.7rem;
     }
-    
+
     .chat-message .text {
         font-size: 0.85rem;
     }
-    
+
     .chat-input-container {
         gap: 6px;
     }
-    
+
     .chat-input-container input {
         padding: 8px 10px;
         font-size: 0.85rem;
     }
-    
+
     .btn-send {
         padding: 8px 12px;
         font-size: 0.85rem;
     }
-    
+
     .quick-messages {
         gap: 5px;
     }
-    
+
     .quick-msg {
         padding: 5px 8px;
         font-size: 0.75rem;
@@ -3407,58 +3510,58 @@ body.theme-light .theme-toggle {
         padding: 10px;
         max-height: 200px;
     }
-    
+
     .chat-panel h3 {
         font-size: 0.9rem;
         margin-bottom: 6px;
     }
-    
+
     .chat-messages {
         height: 120px;
         padding: 6px;
     }
-    
+
     .chat-message {
         padding: 5px 8px;
         max-width: 92%;
         border-radius: 6px;
     }
-    
+
     .chat-message .sender {
         font-size: 0.65rem;
         margin-bottom: 2px;
     }
-    
+
     .chat-message .text {
         font-size: 0.8rem;
     }
-    
+
     .chat-info {
         font-size: 0.75rem;
         padding: 15px;
     }
-    
+
     .chat-input-container {
         flex-direction: row;
         gap: 5px;
     }
-    
+
     .chat-input-container input {
         padding: 7px 8px;
         font-size: 0.8rem;
     }
-    
+
     .btn-send {
         padding: 7px 10px;
         font-size: 0.8rem;
         white-space: nowrap;
     }
-    
+
     .quick-messages {
         gap: 4px;
         justify-content: flex-start;
     }
-    
+
     .quick-msg {
         padding: 4px 6px;
         font-size: 0.7rem;
@@ -3471,27 +3574,27 @@ body.theme-light .theme-toggle {
         padding: 12px;
         max-height: 250px;
     }
-    
+
     .move-history-panel h3 {
         font-size: 0.95rem;
         margin-bottom: 10px;
     }
-    
+
     .move-history-list {
         max-height: 200px;
         font-size: 0.85rem;
     }
-    
+
     .move-pair {
         padding: 5px 6px;
         margin-bottom: 3px;
     }
-    
+
     .move-number {
         font-size: 0.85rem;
         min-width: 25px;
     }
-    
+
     .move-white,
     .move-black {
         padding: 3px 6px;
@@ -3504,34 +3607,34 @@ body.theme-light .theme-toggle {
         padding: 10px;
         max-height: 200px;
     }
-    
+
     .move-history-panel h3 {
         font-size: 0.9rem;
         margin-bottom: 8px;
     }
-    
+
     .move-history-list {
         max-height: 160px;
         font-size: 0.8rem;
     }
-    
+
     .move-pair {
         padding: 4px 5px;
         margin-bottom: 2px;
         border-radius: 4px;
     }
-    
+
     .move-number {
         font-size: 0.8rem;
         min-width: 22px;
     }
-    
+
     .move-white,
     .move-black {
         padding: 2px 5px;
         font-size: 0.75rem;
     }
-    
+
     .no-moves {
         padding: 15px;
         font-size: 0.8rem;
@@ -3546,57 +3649,57 @@ body.theme-light .theme-toggle {
         max-width: 85%;
         border-radius: 12px;
     }
-    
+
     .modal-content h2 {
         font-size: 1.5rem;
         margin-bottom: 15px;
     }
-    
+
     .modal-content p {
         font-size: 1rem;
     }
-    
+
     .modal-buttons {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .modal-buttons .btn {
         min-width: 100%;
     }
-    
+
     .endgame-modal {
         min-width: auto;
     }
-    
+
     .endgame-icon {
         font-size: 3rem;
         margin-bottom: 15px;
     }
-    
+
     .endgame-modal h2 {
         font-size: 1.6rem;
     }
-    
+
     .endgame-modal p {
         font-size: 1.1rem;
         margin-bottom: 25px;
     }
-    
+
     .game-code-display span {
         font-size: 2rem;
         letter-spacing: 3px;
         padding: 12px 20px;
     }
-    
+
     .promotion-choices {
         gap: 15px;
     }
-    
+
     .promotion-piece {
         padding: 12px;
     }
-    
+
     .promotion-piece img {
         width: 50px;
         height: 50px;
@@ -3610,106 +3713,106 @@ body.theme-light .theme-toggle {
         max-width: 92%;
         border-radius: 10px;
     }
-    
+
     .modal-content h2 {
         font-size: 1.3rem;
         margin-bottom: 12px;
     }
-    
+
     .modal-content p {
         font-size: 0.9rem;
     }
-    
+
     .modal-content h3 {
         font-size: 1rem;
         margin: 15px 0 12px 0;
     }
-    
+
     .modal-content input {
         padding: 10px;
         font-size: 0.9rem;
         margin: 15px 0;
     }
-    
+
     .modal-buttons {
         gap: 8px;
         margin-top: 15px;
     }
-    
+
     .modal-buttons .btn {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
-    
+
     .endgame-icon {
         font-size: 2.5rem;
         margin-bottom: 12px;
     }
-    
+
     .endgame-modal h2 {
         font-size: 1.4rem;
         margin-bottom: 10px;
     }
-    
+
     .endgame-modal p {
         font-size: 1rem;
         margin-bottom: 20px;
     }
-    
+
     .rematch-notification {
         padding: 15px;
         margin: 15px 0;
     }
-    
+
     .rematch-text {
         font-size: 1rem;
     }
-    
+
     .rematch-notification-buttons {
         gap: 10px;
         flex-direction: column;
         width: 100%;
     }
-    
+
     .rematch-notification-buttons .btn {
         width: 100%;
     }
-    
+
     .rematch-waiting {
         padding: 12px;
         margin: 15px 0;
     }
-    
+
     .rematch-waiting-text {
         font-size: 0.9rem;
     }
-    
+
     .game-code-display {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .game-code-display span {
         font-size: 1.6rem;
         letter-spacing: 2px;
         padding: 10px 15px;
     }
-    
+
     .btn-copy {
         width: 100%;
         padding: 10px;
     }
-    
+
     .promotion-choices {
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .promotion-piece {
         padding: 10px;
     }
-    
+
     .promotion-piece img {
         width: 45px;
         height: 45px;
@@ -3718,6 +3821,7 @@ body.theme-light .theme-toggle {
 
 /* Ensure touch targets are large enough on mobile */
 @media (max-width: 768px) {
+
     button,
     .btn,
     .btn-control,
@@ -3728,14 +3832,14 @@ body.theme-light .theme-toggle {
         min-height: 44px;
         touch-action: manipulation;
     }
-    
+
     input[type="text"],
     input[type="password"],
     input[type="checkbox"],
     input[type="radio"] {
         min-height: 44px;
     }
-    
+
     /* Prevent zoom on input focus */
     input,
     select,

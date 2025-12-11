@@ -3,23 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiplayer Chess Game</title>
+    <title>Chess Max</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Auth Screen (shown when not logged in) -->
     <div class="auth-screen" id="authScreen">
         <div class="auth-container">
-            <div class="auth-theme-toggle">
-                <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Switch to light mode">
-                    <span class="theme-icon" aria-hidden="true">🌙</span>
-                    <span class="theme-label">Dark</span>
-                </button>
-            </div>
             <div class="auth-header">
                 <div class="auth-logo-title">
                     <img src="images/Logo.png" alt="Chess Logo" class="game-logo">
-                    <h1>Chess Online</h1>
+                    <h1>Chess Max</h1>
                 </div>
                 <p>Play chess online with friends or random opponents</p>
             </div>
@@ -60,7 +54,7 @@
             <header class="header">
                 <div class="header-brand">
                     <img src="images/Logo.png" alt="Chess Logo" class="game-logo">
-                    <h1>Chess Online</h1>
+                    <h1>Chess Max</h1>
                 </div>
                 <div class="header-right">
                     <div class="user-info">
@@ -140,6 +134,13 @@
                                 <label for="brownTheme">
                                     <div class="theme-preview brown-preview"></div>
                                     <div class="theme-name">Wood Brown</div>
+                                </label>
+                            </div>
+                            <div class="theme-option" data-theme="gold">
+                                <input type="radio" name="boardTheme" id="goldTheme" value="gold">
+                                <label for="goldTheme">
+                                    <div class="theme-preview gold-preview"></div>
+                                    <div class="theme-name">Royal Gold</div>
                                 </label>
                             </div>
                         </div>
@@ -284,7 +285,9 @@
                 <div class="board-with-coords">
                     <div class="coord-files board-coords" id="coordFilesTop"></div>
                     <div class="coord-ranks left board-coords" id="coordRanksLeft"></div>
-                    <div class="chessboard" id="chessboard"></div>
+                    <div class="chessboard" id="chessboard">
+                        <div class="board-logo-watermark"></div>
+                    </div>
                     <div class="coord-ranks right board-coords" id="coordRanksRight"></div>
                     <div class="coord-files board-coords" id="coordFilesBottom"></div>
                 </div>

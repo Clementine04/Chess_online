@@ -27,6 +27,11 @@ class ChessUI {
         // Apply theme
         this.boardElement.className = `chessboard theme-${this.currentBoardTheme}`;
 
+        // Add logo watermark
+        const watermark = document.createElement('div');
+        watermark.className = 'board-logo-watermark';
+        this.boardElement.appendChild(watermark);
+
         // Determine board orientation based on player color
         // White players see ranks 8-1 (top to bottom), Black players see ranks 1-8
         const rankStart = this.playerColor === 'black' ? 0 : 7;

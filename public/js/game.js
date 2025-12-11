@@ -3,7 +3,6 @@ let playerId = null;
 let playerColor = null;
 let lastPlayerColor = null; // remember last assigned color for post-game updates
 let isBoardFullscreen = false;
-let currentTheme = localStorage.getItem('chess_theme') || 'dark';
 let currentUser = null; // { id, username, eloRating, token }
 
 // Initialize when page loads
@@ -12,8 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initializeGame() {
-    applyTheme(currentTheme);
-
     // Setup event listeners
     setupEventListeners();
 
@@ -45,23 +42,6 @@ function updateBoardFullscreenState(isActive) {
         if (icon) icon.textContent = isBoardFullscreen ? '[-]' : '[+]';
     }
     document.body.classList.toggle('board-fullscreen-active', isBoardFullscreen);
-}
-
-function applyTheme(theme) {
-    currentTheme = theme === 'light' ? 'light' : 'dark';
-    document.body.classList.toggle('theme-light', currentTheme === 'light');
-    document.body.classList.toggle('theme-dark', currentTheme === 'dark');
-    localStorage.setItem('chess_theme', currentTheme);
-
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-        themeToggle.setAttribute('aria-pressed', currentTheme === 'light' ? 'true' : 'false');
-        themeToggle.setAttribute('aria-label', currentTheme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
-        const label = themeToggle.querySelector('.theme-label');
-        const icon = themeToggle.querySelector('.theme-icon');
-        if (label) label.textContent = currentTheme === 'light' ? 'Light' : 'Dark';
-        if (icon) icon.textContent = currentTheme === 'light' ? '☀️' : '🌙';
-    }
 }
 
 function checkExistingAuth() {
@@ -289,13 +269,6 @@ function setupEventListeners() {
             updateBoardFullscreenState(false);
         }
     });
-
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            applyTheme(currentTheme === 'light' ? 'dark' : 'light');
-        });
-    }
 
     // Rematch button
     const rematchBtn = document.getElementById('rematchBtn');

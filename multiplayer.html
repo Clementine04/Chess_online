@@ -524,6 +524,9 @@
                 socketManager.connect();
             }
 
+            // Reset any leftover state from previous games
+            socketManager.resetState();
+
             const username = sessionStorage.getItem(CURRENT_USER_KEY);
             if (username) {
                 socketManager.authenticate(username);

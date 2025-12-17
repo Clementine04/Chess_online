@@ -5,10 +5,11 @@ class SocketManager {
         this.connected = false;
         this.currentRoom = null;
         this.username = null;
+        this.isInMatchmaking = false;
     }
 
     connect() {
-        if (this.connected) return;
+        if (this.connected && this.socket) return;
 
         this.socket = io();
 
@@ -28,10 +29,8 @@ class SocketManager {
             this.connected = false;
         });
 
-        this.socket.on('error', (error) => {
-            console.error('Socket error:', error);
-            alert(error.message || 'An error occurred');
-        });
+        // Note: Removed global error handler to prevent double alerts
+        // Errors are now handled by specific methods
 
         return this.socket;
     }
@@ -49,6 +48,30 @@ class SocketManager {
             this.connected = false;
             this.currentRoom = null;
         }
+    }
+
+    // Reset state after a game ends - call this when returning to dashboard/multiplayer
+    resetState() {
+        this.currentRoom = null;
+        this.isInMatchmaking = false;
+        if (this.socket) {
+            // Clean up all game-related listeners
+            this.socket.off('searching');
+            this.socket.off('matchFound');
+            this.socket.off('matchmakingTimeout');
+            this.socket.off('playerJoined');
+            this.socket.off('playerLeft');
+            this.socket.off('gameStarting');
+            this.socket.off('gameStarted');
+            this.socket.off('gameOver');
+            this.socket.off('scoresUpdate');
+            this.socket.off('timerUpdate');
+            this.socket.off('opponentDisconnected');
+            this.socket.off('rejoinedRoom');
+        }
+        // Clear session storage room data
+        sessionStorage.removeItem('kw_current_room');
+        sessionStorage.removeItem('kw_room_players');
     }
 
     // Room Management
@@ -110,7 +133,19 @@ class SocketManager {
 
     // Matchmaking
     findMatch(username, onSearching, onMatchFound, onTimeout) {
-        if (!this.socket) return;
+        if (!this.socket) {
+            console.error('Socket not connected');
+            return;
+        }
+
+        // Clean up any previous matchmaking listeners first
+        this.socket.off('searching');
+        this.socket.off('matchFound');
+        this.socket.off('matchmakingTimeout');
+
+        // Reset room state before new matchmaking
+        this.currentRoom = null;
+        this.isInMatchmaking = true;
 
         this.socket.emit('findMatch', username);
 
@@ -119,6 +154,7 @@ class SocketManager {
         });
 
         this.socket.once('matchFound', (data) => {
+            this.isInMatchmaking = false;
             this.socket.off('searching');
             this.socket.off('matchmakingTimeout');
             this.currentRoom = data.roomCode;
@@ -127,6 +163,7 @@ class SocketManager {
 
         // Handle matchmaking timeout from server
         this.socket.once('matchmakingTimeout', (data) => {
+            this.isInMatchmaking = false;
             this.socket.off('searching');
             this.socket.off('matchFound');
             if (onTimeout) onTimeout(data);
@@ -135,6 +172,7 @@ class SocketManager {
 
     cancelMatchmaking() {
         if (!this.socket) return;
+        this.isInMatchmaking = false;
         this.socket.emit('cancelMatchmaking');
         this.socket.off('searching');
         this.socket.off('matchFound');

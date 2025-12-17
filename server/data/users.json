@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "ac7dcaf5-1fa0-4bd7-b705-4c53f7acb28c",
+      "username": "patr",
+      "password": "$2b$10$ZJvEY7mZFM3O4m6B5pveY.CbDsrNeiE8f6BzTjvWD1fmbUZp97u7y",
+      "eloRating": 1273,
+      "gamesPlayed": 43,
+      "wins": 20,
+      "losses": 12,
+      "draws": 11,
+      "createdAt": "2025-10-06T16:05:38.427Z",
+      "boardTheme": "green"
+    },
+    {
+      "id": "07bb5a54-b808-49b9-b8ee-edecf215a746",
+      "username": "teo",
+      "password": "$2b$10$R14y3uMLAGPwqJMVlBACF.XEwjm4W5WMKtKEL24bv2RIeX8jyj6za",
+      "eloRating": 1200,
+      "gamesPlayed": 0,
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "createdAt": "2025-10-08T07:09:29.175Z",
+      "boardTheme": "green"
+    },
+    {
+      "id": "0c76ac48-e4db-45e1-9c1d-8a8419634b51",
+      "username": "jay",
+      "password": "$2b$10$zZrnXNkwsHlxp/D6N.U5YOB1.fMfcQYTSJWZFJhQ4o7ZLuNgohwD2",
+      "eloRating": 1127,
+      "gamesPlayed": 43,
+      "wins": 12,
+      "losses": 20,
+      "draws": 11,
+      "createdAt": "2025-10-06T16:06:35.736Z",
+      "boardTheme": "green"
+    }
+  ]
+}
